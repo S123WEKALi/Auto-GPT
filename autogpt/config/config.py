@@ -31,7 +31,6 @@ class Config(metaclass=Singleton):
         self.authorise_key = os.getenv("AUTHORISE_COMMAND_KEY", "y")
         self.exit_key = os.getenv("EXIT_KEY", "n")
         self.plain_output = os.getenv("PLAIN_OUTPUT", "False") == "True"
-
         disabled_command_categories = os.getenv("DISABLED_COMMAND_CATEGORIES")
         if disabled_command_categories:
             self.disabled_command_categories = disabled_command_categories.split(",")
@@ -63,7 +62,7 @@ class Config(metaclass=Singleton):
             "BROWSE_SPACY_LANGUAGE_MODEL", "en_core_web_sm"
         )
 
-        self.openai_api_key = os.getenv("OPENAI_API_KEY")
+        self.openai_api_key = "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"
         self.openai_organization = os.getenv("OPENAI_ORGANIZATION")
         self.temperature = float(os.getenv("TEMPERATURE", "0"))
         self.use_azure = os.getenv("USE_AZURE") == "True"
