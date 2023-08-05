@@ -4,7 +4,6 @@ from typing import List
 
 import openai
 import yaml
-from auto_gpt_plugin_template import AutoGPTPluginTemplate
 from colorama import Fore
 
 from autogpt.singleton import Singleton
@@ -62,7 +61,7 @@ class Config(metaclass=Singleton):
             "BROWSE_SPACY_LANGUAGE_MODEL", "en_core_web_sm"
         )
 
-        self.openai_api_key = "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"
+        self.openai_api_key = "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"
         self.openai_organization = os.getenv("OPENAI_ORGANIZATION")
         self.temperature = float(os.getenv("TEMPERATURE", "0"))
         self.use_azure = os.getenv("USE_AZURE") == "True"
